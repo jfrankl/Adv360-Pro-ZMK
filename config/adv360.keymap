@@ -6,7 +6,10 @@
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
-&mmv { time-to-max-speed-ms = <0>; };
+&mmv {
+    time-to-max-speed-ms = <0>;
+    acceleration-exponent = <0>;
+};
 
 / {
     behaviors {
