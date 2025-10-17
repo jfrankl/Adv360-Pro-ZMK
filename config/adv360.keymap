@@ -42,8 +42,8 @@
             display-name = "Kp";
             bindings = <
 &trans  &trans  &trans              &trans              &trans             &trans  &trans                                      &trans  &trans     &trans     &trans  &trans  &trans  &trans
-&trans  &trans  &msc MOVE_Y(-15)    &mmv MOVE_Y(-6000)  &msc MOVE_Y(15)    &trans  &trans                                      &trans  &trans     &trans     &trans  &trans  &trans  &trans
-&trans  &trans  &mmv MOVE_X(-3000)  &mmv MOVE_Y(4000)   &mmv MOVE_X(5000)  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &mkp RCLK  &mkp LCLK  &mo 2   &trans  &trans  &trans
+&trans  &trans  &msc MOVE_Y(5)    &mmv MOVE_Y(-1200)  &msc MOVE_Y(-5)    &trans  &trans                                      &trans  &trans     &trans     &trans  &trans  &trans  &trans
+&trans  &trans  &mmv MOVE_X(-1200)  &mmv MOVE_Y(1200)   &mmv MOVE_X(1200)  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &mkp RCLK  &mkp LCLK  &mo 2   &trans  &trans  &trans
 &trans  &trans  &kp C               &trans              &trans             &trans                  &trans      &trans                  &trans     &trans     &trans  &trans  &trans  &trans
 &trans  &trans  &trans              &trans              &trans                     &trans  &trans  &trans      &trans  &trans  &trans             &trans     &trans  &trans  &trans  &trans
             >;
@@ -52,12 +52,13 @@
         mouse_fast {
             display-name = "Fn";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans              &trans              &trans             &trans  &trans                                      &trans  &trans     &trans     &trans  &trans  &trans  &trans
+&trans  &trans  &msc MOVE_Y(15)    &mmv MOVE_Y(-3600)  &msc MOVE_Y(-15)    &trans  &trans                                      &trans  &trans     &trans     &trans  &trans  &trans  &trans
+&trans  &trans  &mmv MOVE_X(-3600)  &mmv MOVE_Y(3600)   &mmv MOVE_X(3600)  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &mkp RCLK  &mkp LCLK  &mo 2   &trans  &trans  &trans
+&trans  &trans  &kp C               &trans              &trans             &trans                  &trans      &trans                  &trans     &trans     &trans  &trans  &trans  &trans
+&trans  &trans  &trans              &trans              &trans                     &trans  &trans  &trans      &trans  &trans  &trans             &trans     &trans  &trans  &trans  &trans
             >;
+        };
         };
 
         mod {
