@@ -29,8 +29,8 @@
             display-name = "Base";
             bindings = <
 &kp EQUAL  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &tog 1                                                      &mo 3         &kp N6  &kp N7  &kp N8     &kp N9    &kp N0    &kp MINUS
-&kp TAB    &kp Q      &kp W     &kp F     &kp D      &kp B   &trans                                                       &trans         &kp J   &kp H   &kp U      &kp Y     &kp SEMI  &kp BSLH
-&kp ESC    &kp A      &kp R     &kp S     &kp T      &kp G   &trans      &kp LGUI  &kp LALT      &kp LCTRL  &kp RCTRL     &trans         &kp M   &kp N   &kp E      &kp I     &kp O     &kp SQT
+&kp TAB    &kp Q      &kp W     &kp F     &kp D      &kp B   &trans                                                      &trans        &kp J   &kp H   &kp U      &kp Y     &kp SEMI  &kp BSLH
+&kp ESC    &kp A      &kp R     &kp S     &kp T      &kp G   &trans     &kp LGUI  &kp LALT      &kp LCTRL  &kp RCTRL     &trans        &kp M   &kp N   &kp E      &kp I     &kp O     &kp SQT
 &kp LSHFT  &kp Z      &kp X     &kp C     &kp P      &kp V                        &kp HOME      &kp PG_UP                              &kp K   &kp L   &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
 &mo 2      &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &kp SPACE  &kp BSPC  &kp END       &kp PG_DN  &lt 4 RETURN  &lt 1 LSHIFT          &kp UP  &kp DOWN   &kp LBKT  &kp RBKT  &mo 2
             >;
@@ -39,77 +39,77 @@
         mouse_default {
             display-name = "Kp";
             bindings = <
-&trans  &trans  &trans           &trans           &trans            &trans  &trans                                  &trans  &trans      &trans      &trans  &trans  &trans  &trans
-&trans  &trans  &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &trans  &trans                                  &trans  &trans      &trans      &trans  &trans  &trans  &trans
-&trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &mkp RCLK  &mkp LCLK  &mo 2  &trans  &trans  &trans
-&trans  &trans  &trans           &trans           &trans            &trans                &trans      &trans                &trans      &trans      &trans  &trans  &trans  &trans
-&trans  &trans  &trans           &trans           &trans                   &trans  &trans  &trans      &trans  &trans  &trans             &trans      &trans  &trans  &trans  &trans
+&trans  &trans  &trans             &trans             &trans            &trans  &trans                                      &trans  &trans     &trans     &trans  &trans  &trans  &trans
+&trans  &trans  &msc MOVE_Y(-15)   &mmv MOVE_Y(-500)  &msc MOVE_Y(15)   &trans  &trans                                      &trans  &trans     &trans     &trans  &trans  &trans  &trans
+&trans  &trans  &mmv MOVE_X(-500)  &mmv MOVE_Y(500)   &mmv MOVE_X(500)  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &mkp RCLK  &mkp LCLK  &mo 2   &trans  &trans  &trans
+&trans  &trans  &trans             &trans             &trans            &trans                  &trans      &trans                  &trans     &trans     &trans  &trans  &trans  &trans
+&trans  &trans  &trans             &trans             &trans                    &trans  &trans  &trans      &trans  &trans  &trans             &trans     &trans  &trans  &trans  &trans
             >;
         };
 
         mouse_fast {
             display-name = "Fn";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                &trans      &trans                &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans         &trans  &trans  &trans      &trans  &trans  &trans         &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
 
         mod {
             display-name = "Mod";
             bindings = <
-&trans           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans                                                  &trans           &trans  &trans       &trans       &trans  &trans  &trans
-&trans           &trans         &trans         &trans         &trans         &trans         &bootloader                                            &bootloader      &trans  &trans       &trans       &trans  &trans  &trans
-&studio_unlock  &trans         &trans         &trans         &trans         &trans         &trans        &trans  &trans      &bt BT_CLR  &trans       &stp STP_BAT     &trans  &trans       &trans       &trans  &trans  &trans
-&trans           &trans         &trans         &trans         &macro_ver    &trans                             &trans      &trans                                    &trans  &trans       &trans       &trans  &trans  &trans
-&trans           &trans         &trans         &trans         &trans                       &trans        &trans  &trans      &trans       &bl BL_TOG  &rgb_ug RGB_TOG         &bl BL_INC  &bl BL_DEC  &trans  &trans  &trans
+&trans          &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans                                                   &trans           &trans  &trans      &trans      &trans  &trans  &trans
+&trans          &trans        &trans        &trans        &trans        &trans        &bootloader                                              &bootloader      &trans  &trans      &trans      &trans  &trans  &trans
+&studio_unlock  &trans        &trans        &trans        &trans        &trans        &trans       &trans  &trans      &bt BT_CLR  &trans      &stp STP_BAT     &trans  &trans      &trans      &trans  &trans  &trans
+&trans          &trans        &trans        &trans        &macro_ver    &trans                             &trans      &trans                                   &trans  &trans      &trans      &trans  &trans  &trans
+&trans          &trans        &trans        &trans        &trans                      &trans       &trans  &trans      &trans      &bl BL_TOG  &rgb_ug RGB_TOG          &bl BL_INC  &bl BL_DEC  &trans  &trans  &trans
             >;
         };
 
         move_single {
             display-name = "Red";
             bindings = <
-&trans  &trans  &trans        &trans     &trans      &trans  &trans                                  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp LS(TAB)  &kp UP    &kp TAB    &trans  &trans                                  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp LEFT     &kp DOWN  &kp RIGHT  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp LEFT     &kp UP    &kp RIGHT  &trans                &trans      &trans                &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans        &kp DOWN  &trans             &trans  &trans  &trans      &trans  &trans  &trans         &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans        &trans        &trans         &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp LS(TAB)   &kp UP        &kp TAB        &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp LEFT      &kp DOWN      &kp RIGHT      &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp LS(LEFT)  &kp LS(UP)    &kp LS(RIGHT)  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans        &kp LS(DOWN)  &trans                 &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
 
         move_word {
             display-name = "Purple";
             bindings = <
-&trans  &trans  &trans        &trans         &trans      &trans  &trans                                  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp LS(TAB)  &kp LA(UP)        &kp TAB    &trans  &trans                                  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp LA(LEFT)     &kp LA(DOWN)  &kp LA(RIGHT)  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp LS(LA(LEFT))     &kp LS(LA(UP))        &kp LS(LA(RIGHT))  &trans                &trans      &trans                &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans        &kp LS(LA(DOWN))      &trans             &trans  &trans  &trans      &trans  &trans  &trans         &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans            &trans            &trans             &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp LS(TAB)       &kp LA(UP)        &kp TAB            &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp LA(LEFT)      &kp LA(DOWN)      &kp LA(RIGHT)      &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp LS(LA(LEFT))  &kp LS(LA(UP))    &kp LS(LA(RIGHT))  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans            &kp LS(LA(DOWN))  &trans                     &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
 
         move_line {
             display-name = "Cyan";
             bindings = <
-&trans  &trans  &trans        &trans         &trans      &trans  &trans                                  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp LS(TAB)  &kp LG(UP)        &kp TAB    &trans  &trans                                  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp LG(LEFT)     &kp LG(DOWN)  &kp LG(RIGHT)  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp LS(LG(LEFT))     &kp LS(LG(UP))        &kp LS(LG(RIGHT))  &trans                &trans      &trans                &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans        &kp LS(LG(DOWN))      &trans             &trans  &trans  &trans      &trans  &trans  &trans         &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans            &trans            &trans             &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp LS(TAB)       &kp LG(UP)        &kp TAB            &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp LG(LEFT)      &kp LG(DOWN)      &kp LG(RIGHT)      &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp LS(LG(LEFT))  &kp LS(LG(UP))    &kp LS(LG(RIGHT))  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans            &kp LS(LG(DOWN))  &trans                     &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
 
         extra4 {
             display-name = "Yellow";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                &trans      &trans                &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans         &trans  &trans  &trans      &trans  &trans  &trans         &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
