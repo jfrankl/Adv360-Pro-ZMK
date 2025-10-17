@@ -25,18 +25,6 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
-
-        mmv_slow: move_slow {
-            compatible = "zmk,behavior-mouse-move";
-            #binding-cells = <1>;
-            move_val = <600>;
-        };
-
-        mmv_fast: move_fast {
-            compatible = "zmk,behavior-mouse-move";
-            #binding-cells = <1>;
-            move_val = <4000>;
-        };
     };
 
     keymap {
@@ -56,23 +44,24 @@
         mouse_default {
             display-name = "Kp";
             bindings = <
-&trans  &trans  &trans              &trans              &trans             &trans  &trans                                        &trans  &trans     &trans     &trans  &trans  &trans  &trans
-&trans  &trans  &msc MOVE_Y(5)      &mmv MOVE_Y(-1200)  &msc MOVE_Y(-5)    &trans  &trans                                        &trans  &trans     &trans     &trans  &trans  &trans  &trans
-&trans  &trans  &mmv MOVE_X(-1200)  &mmv MOVE_Y(1200)   &mmv MOVE_X(1200)  &trans  &trans   &trans   &trans      &trans  &trans  &trans  &mkp RCLK  &mkp LCLK  &mo 2   &trans  &trans  &trans
-&trans  &trans  &trans              &mmv_slow MOVE_LEFT              &trans             &trans                    &trans      &trans                  &trans     &trans     &trans  &trans  &trans  &trans
-&trans  &trans  &trans              &trans              &trans                     &kp F20  &kp F21  &trans      &trans  &trans  &trans             &trans     &trans  &trans  &trans  &trans
+&trans  &trans  &trans              &trans              &trans             &trans  &trans                                      &trans  &trans     &trans     &trans  &trans  &trans  &trans
+&trans  &trans  &msc MOVE_Y(15)     &mmv MOVE_Y(-3600)  &msc MOVE_Y(-15)   &trans  &trans                                      &trans  &trans     &trans     &trans  &trans  &trans  &trans
+&trans  &trans  &mmv MOVE_X(-3600)  &mmv MOVE_Y(3600)   &mmv MOVE_X(3600)  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &mkp RCLK  &mkp LCLK  &trans  &trans  &trans  &trans
+&trans  &trans  &trans              &trans              &trans             &trans                  &trans      &trans                  &trans     &trans     &trans  &trans  &trans  &trans
+&trans  &trans  &trans              &trans              &trans                     &trans  &trans  &trans      &trans  &trans  &trans             &trans     &trans  &trans  &trans  &trans
             >;
         };
 
         mouse_fast {
             display-name = "Fn";
             bindings = <
-&trans  &trans  &trans              &trans              &trans             &trans  &trans                                      &trans  &trans     &trans     &trans  &trans  &trans  &trans
-&trans  &trans  &msc MOVE_Y(15)     &mmv MOVE_Y(-3600)  &msc MOVE_Y(-15)   &trans  &trans                                      &trans  &trans     &trans     &trans  &trans  &trans  &trans
-&trans  &trans  &mmv MOVE_X(-3600)  &mmv MOVE_Y(3600)   &mmv MOVE_X(3600)  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &mkp RCLK  &mkp LCLK  &trans  &trans  &trans  &trans
-&trans  &trans  &trans              &mmv_fast MOVE_LEFT              &trans             &trans                  &trans      &trans                  &trans     &trans     &trans  &trans  &trans  &trans
-&trans  &trans  &trans              &trans              &trans                     &trans  &trans  &trans      &trans  &trans  &trans             &trans     &trans  &trans  &trans  &trans
+&trans  &trans  &trans              &trans              &trans             &trans  &trans                                        &trans  &trans     &trans     &trans  &trans  &trans  &trans
+&trans  &trans  &msc MOVE_Y(5)      &mmv MOVE_Y(-1200)  &msc MOVE_Y(-5)    &trans  &trans                                        &trans  &trans     &trans     &trans  &trans  &trans  &trans
+&trans  &trans  &mmv MOVE_X(-1200)  &mmv MOVE_Y(1200)   &mmv MOVE_X(1200)  &trans  &trans   &trans   &trans      &trans  &trans  &trans  &mkp RCLK  &mkp LCLK  &mo 1   &trans  &trans  &trans
+&trans  &trans  &trans              &trans              &trans             &trans                    &trans      &trans                  &trans     &trans     &trans  &trans  &trans  &trans
+&trans  &trans  &trans              &trans              &trans                     &kp F20  &kp F21  &trans      &trans  &trans  &trans             &trans     &trans  &trans  &trans  &trans
             >;
+            
         };
 
         mod {
