@@ -9,7 +9,6 @@
 &mmv {
     compatible = "zmk,behavior-mouse-move";
     acceleration-exponent = <0>;
-    speed-multiplier = <1>;  // default speed
 };
 
 / {
@@ -27,11 +26,14 @@
             bindings = <&kp>, <&kp>;
         };
 
-        mouse_speed_boost {
-            compatible = "zmk,behavior-macro";
-            label = "MOUSE_SPEED_BOOST";
-            #binding-cells = <1>;
-            bindings = <&set_mouse_speed 3>, <&set_mouse_speed 1>;
+        mmv_slow: move_slow {
+            compatible = "zmk,behavior-mouse-move";
+            move_val = <600>;
+        };
+
+        mmv_fast: move_fast {
+            compatible = "zmk,behavior-mouse-move";
+            move_val = <3000>;
         };
     };
 
@@ -55,7 +57,7 @@
 &trans  &trans  &trans              &trans              &trans             &trans  &trans                                        &trans  &trans     &trans     &trans  &trans  &trans  &trans
 &trans  &trans  &msc MOVE_Y(5)      &mmv MOVE_Y(-1200)  &msc MOVE_Y(-5)    &trans  &trans                                        &trans  &trans     &trans     &trans  &trans  &trans  &trans
 &trans  &trans  &mmv MOVE_X(-1200)  &mmv MOVE_Y(1200)   &mmv MOVE_X(1200)  &trans  &trans   &trans   &trans      &trans  &trans  &trans  &mkp RCLK  &mkp LCLK  &mouse_speed_boost   &trans  &trans  &trans
-&trans  &trans  &trans              &trans              &trans             &trans                    &trans      &trans                  &trans     &trans     &trans  &trans  &trans  &trans
+&trans  &trans  &trans              &mmv_slow MOVE_LEFT              &trans             &trans                    &trans      &trans                  &trans     &trans     &trans  &trans  &trans  &trans
 &trans  &trans  &trans              &trans              &trans                     &kp F20  &kp F21  &trans      &trans  &trans  &trans             &trans     &trans  &trans  &trans  &trans
             >;
         };
@@ -66,7 +68,7 @@
 &trans  &trans  &trans              &trans              &trans             &trans  &trans                                      &trans  &trans     &trans     &trans  &trans  &trans  &trans
 &trans  &trans  &msc MOVE_Y(15)     &mmv MOVE_Y(-3600)  &msc MOVE_Y(-15)   &trans  &trans                                      &trans  &trans     &trans     &trans  &trans  &trans  &trans
 &trans  &trans  &mmv MOVE_X(-3600)  &mmv MOVE_Y(3600)   &mmv MOVE_X(3600)  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &mkp RCLK  &mkp LCLK  &trans  &trans  &trans  &trans
-&trans  &trans  &trans              &trans              &trans             &trans                  &trans      &trans                  &trans     &trans     &trans  &trans  &trans  &trans
+&trans  &trans  &trans              &mmv_fast MOVE_LEFT              &trans             &trans                  &trans      &trans                  &trans     &trans     &trans  &trans  &trans  &trans
 &trans  &trans  &trans              &trans              &trans                     &trans  &trans  &trans      &trans  &trans  &trans             &trans     &trans  &trans  &trans  &trans
             >;
         };
