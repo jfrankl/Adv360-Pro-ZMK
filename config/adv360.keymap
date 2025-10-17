@@ -28,12 +28,14 @@
 
         mmv_slow: move_slow {
             compatible = "zmk,behavior-mouse-move";
+            #binding-cells = <1>;
             move_val = <600>;
         };
 
         mmv_fast: move_fast {
             compatible = "zmk,behavior-mouse-move";
-            move_val = <3000>;
+            #binding-cells = <1>;
+            move_val = <4000>;
         };
     };
 
