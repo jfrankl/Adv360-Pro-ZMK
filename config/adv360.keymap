@@ -6,10 +6,7 @@
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
-&mmv {
-    compatible = "zmk,behavior-mouse-move";
-    acceleration-exponent = <0>;
-};
+&mmv { acceleration-exponent = <0>; };
 
 / {
     behaviors {
@@ -61,7 +58,6 @@
 &trans  &trans  &trans              &trans              &trans             &trans                    &trans      &trans                  &trans     &trans     &trans  &trans  &trans  &trans
 &trans  &trans  &trans              &trans              &trans                     &kp F20  &kp F21  &trans      &trans  &trans  &trans             &trans     &trans  &trans  &trans  &trans
             >;
-            
         };
 
         mod {
