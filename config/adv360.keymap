@@ -41,11 +41,11 @@
         mouse_default {
             display-name = "Kp";
             bindings = <
-&trans  &trans  &trans             &trans             &trans            &trans  &trans                                      &trans  &trans     &trans     &trans  &trans  &trans  &trans
-&trans  &trans  &msc MOVE_Y(-15)   &mmv MOVE_Y(-6000)  &msc MOVE_Y(15)   &trans  &trans                                      &trans  &trans     &trans     &trans  &trans  &trans  &trans
+&trans  &trans  &trans              &trans              &trans             &trans  &trans                                      &trans  &trans     &trans     &trans  &trans  &trans  &trans
+&trans  &trans  &msc MOVE_Y(-15)    &mmv MOVE_Y(-6000)  &msc MOVE_Y(15)    &trans  &trans                                      &trans  &trans     &trans     &trans  &trans  &trans  &trans
 &trans  &trans  &mmv MOVE_X(-3000)  &mmv MOVE_Y(4000)   &mmv MOVE_X(5000)  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &mkp RCLK  &mkp LCLK  &mo 2   &trans  &trans  &trans
-&trans  &trans  &trans             &trans             &trans            &trans                  &trans      &trans                  &trans     &trans     &trans  &trans  &trans  &trans
-&trans  &trans  &trans             &trans             &trans                    &trans  &trans  &trans      &trans  &trans  &trans             &trans     &trans  &trans  &trans  &trans
+&trans  &trans  &kp C               &trans              &trans             &trans                  &trans      &trans                  &trans     &trans     &trans  &trans  &trans  &trans
+&trans  &trans  &trans              &trans              &trans                     &trans  &trans  &trans      &trans  &trans  &trans             &trans     &trans  &trans  &trans  &trans
             >;
         };
 
