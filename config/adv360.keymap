@@ -39,11 +39,11 @@
         mouse_default {
             display-name = "Kp";
             bindings = <
-&trans  &trans  &trans             &trans             &trans            &trans  &trans                                      &trans  &trans     &trans     &trans  &trans  &trans  &trans
-&trans  &trans  &msc MOVE_Y(-15)   &mmv MOVE_Y(-5000)  &msc MOVE_Y(15)   &trans  &trans                                      &trans  &trans     &trans     &trans  &trans  &trans  &trans
+&trans  &trans  &trans              &trans              &trans             &trans  &trans                                      &trans  &trans     &trans     &trans  &trans  &trans  &trans
+&trans  &trans  &msc MOVE_Y(-15)    &mmv MOVE_Y(-5000)  &msc MOVE_Y(15)    &trans  &trans                                      &trans  &trans     &trans     &trans  &trans  &trans  &trans
 &trans  &trans  &mmv MOVE_X(-3000)  &mmv MOVE_Y(4000)   &mmv MOVE_X(6000)  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &mkp RCLK  &mkp LCLK  &mo 2   &trans  &trans  &trans
-&trans  &trans  &trans             &trans             &trans            &trans                  &trans      &trans                  &trans     &trans     &trans  &trans  &trans  &trans
-&trans  &trans  &trans             &trans             &trans                    &trans  &trans  &trans      &trans  &trans  &trans             &trans     &trans  &trans  &trans  &trans
+&trans  &trans  &trans              &trans              &trans             &trans                  &trans      &trans                  &trans     &trans     &trans  &trans  &trans  &trans
+&trans  &trans  &trans              &trans              &trans                     &trans  &trans  &trans      &trans  &trans  &trans             &trans     &trans  &trans  &trans  &trans
             >;
         };
 
@@ -74,7 +74,7 @@
             bindings = <
 &trans  &trans  &trans        &trans        &trans         &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &kp LS(TAB)   &kp UP        &kp TAB        &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp LEFT      &kp DOWN      &kp RIGHT      &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp LEFT      &kp DOWN      &kp RIGHT      &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &mo 6   &mo 5   &trans  &trans  &trans
 &trans  &trans  &kp LS(LEFT)  &kp LS(UP)    &kp LS(RIGHT)  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans        &kp LS(DOWN)  &trans                 &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
