@@ -56,7 +56,7 @@
             bindings = <
 &trans  &trans  &trans              &trans              &trans             &trans  &trans                                        &trans  &trans     &trans     &trans  &trans  &trans  &trans
 &trans  &trans  &msc MOVE_Y(5)      &mmv MOVE_Y(-1200)  &msc MOVE_Y(-5)    &trans  &trans                                        &trans  &trans     &trans     &trans  &trans  &trans  &trans
-&trans  &trans  &mmv MOVE_X(-1200)  &mmv MOVE_Y(1200)   &mmv MOVE_X(1200)  &trans  &trans   &trans   &trans      &trans  &trans  &trans  &mkp RCLK  &mkp LCLK  &mouse_speed_boost   &trans  &trans  &trans
+&trans  &trans  &mmv MOVE_X(-1200)  &mmv MOVE_Y(1200)   &mmv MOVE_X(1200)  &trans  &trans   &trans   &trans      &trans  &trans  &trans  &mkp RCLK  &mkp LCLK  &mo 2   &trans  &trans  &trans
 &trans  &trans  &trans              &mmv_slow MOVE_LEFT              &trans             &trans                    &trans      &trans                  &trans     &trans     &trans  &trans  &trans  &trans
 &trans  &trans  &trans              &trans              &trans                     &kp F20  &kp F21  &trans      &trans  &trans  &trans             &trans     &trans  &trans  &trans  &trans
             >;
