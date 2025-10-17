@@ -40,8 +40,8 @@
             display-name = "Kp";
             bindings = <
 &trans  &trans  &trans             &trans             &trans            &trans  &trans                                      &trans  &trans     &trans     &trans  &trans  &trans  &trans
-&trans  &trans  &msc MOVE_Y(-15)   &mmv MOVE_Y(-500)  &msc MOVE_Y(15)   &trans  &trans                                      &trans  &trans     &trans     &trans  &trans  &trans  &trans
-&trans  &trans  &mmv MOVE_X(-500)  &mmv MOVE_Y(500)   &mmv MOVE_X(500)  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &mkp RCLK  &mkp LCLK  &mo 2   &trans  &trans  &trans
+&trans  &trans  &msc MOVE_Y(-15)   &mmv MOVE_Y(-5000)  &msc MOVE_Y(15)   &trans  &trans                                      &trans  &trans     &trans     &trans  &trans  &trans  &trans
+&trans  &trans  &mmv MOVE_X(-3000)  &mmv MOVE_Y(4000)   &mmv MOVE_X(6000)  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &mkp RCLK  &mkp LCLK  &mo 2   &trans  &trans  &trans
 &trans  &trans  &trans             &trans             &trans            &trans                  &trans      &trans                  &trans     &trans     &trans  &trans  &trans  &trans
 &trans  &trans  &trans             &trans             &trans                    &trans  &trans  &trans      &trans  &trans  &trans             &trans     &trans  &trans  &trans  &trans
             >;
