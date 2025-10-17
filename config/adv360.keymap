@@ -39,11 +39,11 @@
         mouse_default {
             display-name = "Kp";
             bindings = <
-&none  &none  &none           &none              &none            &none  &none                                  &none  &none  &none    &none      &none  &none  &none
-&none  &none  &msc SCRL_UP    &mmv MOVE_UP       &msc SCRL_DOWN   &none  &none                                  &none  &none  &none    &none      &none  &none  &none
-&none  &none  &mmv MOVE_LEFT  &mmv MOVE_DOWN 40  &mmv MOVE_RIGHT  &none  &none  &none  &none      &none  &none  &none  &none  &kp F19  &mkp LCLK  &none  &none  &none
-&none  &none  &none           &none              &none            &none                &none      &none                &none  &none    &none      &none  &none  &none
-&none  &none  &none           &none              &none                   &none  &none  &none      &none  &none  &none         &none    &none      &none  &none  &none
+&none  &none  &none           &none           &none            &none  &none                                  &none  &none  &none    &none      &none  &none  &none
+&none  &none  &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &none  &none                                  &none  &none  &none    &none      &none  &none  &none
+&none  &none  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none  &none  &none  &none      &none  &none  &none  &none  &kp F19  &mkp LCLK  &none  &none  &none
+&none  &none  &none           &none           &none            &none                &none      &none                &none  &none    &none      &none  &none  &none
+&none  &none  &none           &none           &none                   &none  &none  &none      &none  &none  &none         &none    &none      &none  &none  &none
             >;
         };
 
