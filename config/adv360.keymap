@@ -6,6 +6,8 @@
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
+&mmv { acceleration-exponent = <0>; };
+
 / {
     behaviors {
         #include "macros.dtsi"
