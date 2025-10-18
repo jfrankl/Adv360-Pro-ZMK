@@ -6,19 +6,17 @@
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
+#define MOVE_LEFT MOVE_X(-20)
+#define MOVE_RIGHT MOVE_X(20)
+#define MOVE_UP MOVE_Y(-20)
+#define MOVE_DOWN MOVE_Y(20)
+
 &mmv { acceleration-exponent = <0>; };
 
 / {
     behaviors {
         #include "macros.dtsi"
         #include "version.dtsi"
-
-        mmv_move_left: MOVE_LEFT {
-            compatible = "zmk,behavior-mouse-move";
-            label = "MOVE_LEFT";
-            delay-ms = <0>;
-            params = <(-20) 0>;  // x, y movement
-        };
 
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
