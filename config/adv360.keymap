@@ -41,7 +41,7 @@
         mouse_default {
             display-name = "Kp";
             bindings = <
-&trans  &trans  &trans              &trans              &trans             &trans  &trans                                      &trans  &trans     &trans     &trans  &trans  &trans  &trans
+&trans  &kp B   &trans              &trans              &trans             &trans  &trans                                      &trans  &trans     &trans     &trans  &trans  &trans  &trans
 &trans  &trans  &msc MOVE_Y(15)     &mmv MOVE_Y(-3600)  &msc MOVE_Y(-15)   &trans  &trans                                      &trans  &trans     &trans     &trans  &trans  &trans  &trans
 &trans  &trans  &mmv MOVE_X(-3600)  &mmv MOVE_Y(3600)   &mmv MOVE_X(3600)  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &mkp RCLK  &mkp LCLK  &trans  &trans  &trans  &trans
 &trans  &trans  &trans              &trans              &trans             &trans                  &trans      &trans                  &trans     &trans     &trans  &trans  &trans  &trans
