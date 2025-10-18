@@ -5,20 +5,11 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
+#include "mouse_speed.h"   // 👈 include our new macro file
 
-// ---------- Custom Mouse Speed Macros ----------
-#define MOVE_LEFT_SLOW      MOVE_X(-20)
-#define MOVE_RIGHT_SLOW     MOVE_X(20)
-#define MOVE_UP_SLOW        MOVE_Y(-20)
-#define MOVE_DOWN_SLOW      MOVE_Y(20)
+&mmv { acceleration-exponent = <0>; };
 
-#define MOVE_LEFT_FAST      MOVE_X(-200)
-#define MOVE_RIGHT_FAST     MOVE_X(200)
-#define MOVE_UP_FAST        MOVE_Y(-200)
-#define MOVE_DOWN_FAST      MOVE_Y(200)
-// ------------------------------------------------
-
-/ {
+ / {
     behaviors {
         #include "macros.dtsi"
         #include "version.dtsi"
@@ -41,50 +32,51 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&kp EQUAL  &kp N1     &kp N2    &kp N3    &kp N4  &kp N5  &tog 1                                                             &mo BOOST         &kp N6  &kp N7  &kp N8     &kp N9    &kp N0    &kp MINUS
-&kp TAB    &kp Q      &kp W     &kp F     &kp D   &kp B   &trans                                                             &trans             &kp J   &kp H   &kp U      &kp Y     &kp SEMI  &kp BSLH
-&kp ESC    &kp A      &kp R     &kp S     &kp T   &kp G   &trans     &kp LGUI         &kp LALT      &kp LCTRL  &kp RCTRL     &trans        &kp M   &kp N   &kp E      &kp I     &kp O     &kp SQT
-&kp LSHFT  &kp Z      &kp X     &kp C     &kp P   &kp V                               &kp HOME      &kp PG_UP                              &kp K   &kp L   &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
-&mo 2      &kp GRAVE  &kp CAPS  &kp LEFT  &kp A           &kp SPACE  &lt 7 BACKSPACE  &kp END       &kp PG_DN  &lt 4 RETURN  &lt 1 LSHIFT          &kp UP  &kp DOWN   &kp LBKT  &kp RBKT  &mo 2
+&kp EQUAL  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &tog 1                                          &mo BOOST   &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp MINUS
+&kp TAB    &kp Q   &kp W   &kp F   &kp D   &kp B   &trans                                          &trans      &kp J   &kp H   &kp U   &kp Y   &kp SEMI  &kp BSLH
+&kp ESC    &kp A   &kp R   &kp S   &kp T   &kp G   &trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp RCTRL  &trans      &kp M   &kp N   &kp E   &kp I   &kp O   &kp SQT
+&kp LSHFT  &kp Z   &kp X   &kp C   &kp P   &kp V                       &kp HOME &kp PG_UP            &kp K   &kp L   &kp COMMA &kp DOT &kp FSLH &kp RSHFT
+&mo 2      &kp GRAVE &kp CAPS &kp LEFT &kp A  &kp SPACE &lt 7 BACKSPACE &kp END &kp PG_DN &lt 4 RETURN &lt 1 LSHIFT &kp UP &kp DOWN &kp LBKT &kp RBKT &mo 2
             >;
         };
 
-        // -------------------- MOUSE DEFAULT (SLOW SPEED) --------------------
+        // -------------------- MOUSE DEFAULT --------------------
         mouse_default {
             display-name = "Mouse";
             bindings = <
-&trans  &kp Z   &trans                &trans                &trans             &trans  &trans                                        &trans  &trans     &trans     &trans  &trans  &trans  &trans
-&trans  &trans  &mmv MOVE_UP_SLOW      &mmv MOVE_DOWN_SLOW    &mmv MOVE_DOWN_SLOW &trans  &trans                                      &trans  &trans     &trans     &trans  &trans  &trans  &trans
-&trans  &trans  &mmv MOVE_LEFT_SLOW    &mmv MOVE_UP_SLOW      &mmv MOVE_RIGHT_SLOW &trans  &trans  &trans   &trans      &trans  &trans  &trans  &mkp RCLK  &mkp LCLK  &mo BOOST   &trans  &trans  &trans
-&trans  &trans  &trans                &trans                &trans             &trans                  &trans      &trans                  &trans     &trans     &trans  &trans  &trans  &trans
-&trans  &trans  &trans                &trans                &trans                     &mo BOOST  &kp F21  &trans      &trans  &trans  &trans             &trans     &trans  &trans  &trans  &trans
+&trans &kp Z &trans &trans &trans &trans &trans                                   &trans &trans &trans &trans &trans &trans &trans
+&trans &trans &mmv MOVE_UP_SLOW &mmv MOVE_DOWN_SLOW &mmv MOVE_DOWN_SLOW &trans &trans &trans &trans &trans &trans &trans &trans &trans
+&trans &trans &mmv MOVE_LEFT_SLOW &mmv MOVE_UP_SLOW &mmv MOVE_RIGHT_SLOW &trans &trans &trans &trans &trans &trans &trans &mkp RCLK &mkp LCLK &mo BOOST &trans &trans &trans
+&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans &mo BOOST &kp F21 &trans &trans &trans &trans &trans &trans &trans &trans &trans
             >;
         };
 
-        // -------------------- MOUSE BOOST (FAST SPEED) --------------------
+        // -------------------- BOOST (FAST) --------------------
         boost_layer: mouse_fast {
             display-name = "Mouse Boost";
             bindings = <
-&trans  &kp B   &trans                &trans                &trans             &trans  &trans                                      &trans  &trans     &trans     &trans  &trans  &trans  &trans
-&trans  &trans  &mmv MOVE_UP_FAST      &mmv MOVE_DOWN_FAST    &mmv MOVE_DOWN_FAST &trans  &trans                                      &trans  &trans     &trans     &trans  &trans  &trans  &trans
-&trans  &trans  &mmv MOVE_LEFT_FAST    &mmv MOVE_UP_FAST      &mmv MOVE_RIGHT_FAST &trans  &trans  &trans   &trans      &trans  &trans  &trans  &mkp RCLK  &mkp LCLK  &trans  &mo 1  &trans  &trans
-&trans  &trans  &trans                &trans                &trans             &trans                  &trans      &trans                  &trans     &trans     &trans  &trans  &trans  &trans
-&trans  &trans  &trans                &trans                &trans                     &trans  &trans  &trans      &trans  &trans  &trans             &trans     &trans  &trans  &trans  &trans
+&trans &kp B &trans &trans &trans &trans &trans                               &trans &trans &trans &trans &trans &trans &trans
+&trans &trans &mmv MOVE_UP_FAST &mmv MOVE_DOWN_FAST &mmv MOVE_DOWN_FAST &trans &trans &trans &trans &trans &trans &trans &trans &trans
+&trans &trans &mmv MOVE_LEFT_FAST &mmv MOVE_UP_FAST &mmv MOVE_RIGHT_FAST &trans &trans &trans &trans &trans &trans &trans &mkp RCLK &mkp LCLK &trans &mo 1 &trans &trans
+&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
             >;
         };
 
-        // -------------------- MOD / FUNCTION LAYER --------------------
+        // -------------------- MOD LAYER --------------------
         mod {
             display-name = "Mod";
             bindings = <
-&trans          &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans                                                   &trans           &trans  &trans      &trans      &trans  &trans  &trans
-&trans          &trans        &trans        &trans        &trans        &trans        &bootloader                                              &bootloader      &trans  &trans      &trans      &trans  &trans  &trans
-&studio_unlock  &trans        &trans        &trans        &trans        &trans        &trans       &trans  &trans      &bt BT_CLR  &trans      &stp STP_BAT     &trans  &trans      &trans      &trans  &trans  &trans
-&trans          &trans        &trans        &trans        &macro_ver    &trans                             &trans      &trans                                   &trans  &trans      &trans      &trans  &trans  &trans
-&trans          &trans        &trans        &trans        &trans                      &trans       &trans  &trans      &trans      &bl BL_TOG  &rgb_ug RGB_TOG          &bl BL_INC  &bl BL_DEC  &trans  &trans  &trans
+&trans &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &trans &trans &trans &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans &trans &bootloader &bootloader &trans &trans &trans &trans &trans &trans
+&studio_unlock &trans &trans &trans &trans &trans &trans &trans &trans &bt BT_CLR &trans &stp STP_BAT &trans &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &macro_ver &trans &trans &trans &trans &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &bl BL_TOG &rgb_ug RGB_TOG &bl BL_INC &bl BL_DEC &trans &trans &trans
             >;
         };
 
-        // Other layers (move_single, move_word, move_line, symbol) can remain unchanged
+        // Other layers unchanged
     };
 };
+
