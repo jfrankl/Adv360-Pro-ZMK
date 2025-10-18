@@ -30,33 +30,33 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&kp EQUAL  &kp N1     &kp N2    &kp N3    &kp N4  &kp N5  &tog 1                                                             &mo 3         &kp N6  &kp N7      &kp N8           &kp N9       &kp N0    &kp MINUS
-&kp TAB    &kp Q      &kp W     &kp F     &kp D   &kp B   &trans                                                             &trans        &kp J   &kp H       &kp U            &kp Y        &kp SEMI  &kp BSLH
-&kp ESC    &kp A      &kp R     &kp S     &kp T   &kp G   &trans     &kp LGUI         &kp LALT      &kp LCTRL  &kp RCTRL     &trans        &kp M   &hm RGUI N  &hm RIGHT_ALT E  &hm RCTRL I  &kp O     &kp SQT
-&kp LSHFT  &kp Z      &kp X     &kp C     &kp P   &kp V                               &kp HOME      &kp PG_UP                              &kp K   &kp L       &kp COMMA        &kp DOT      &kp FSLH  &kp RSHFT
-&mo 2      &kp GRAVE  &kp CAPS  &kp LEFT  &kp A           &kp SPACE  &lt 7 BACKSPACE  &kp END       &kp PG_DN  &lt 4 RETURN  &lt 1 LSHIFT          &kp UP      &kp DOWN         &kp LBKT     &kp RBKT  &mo 2
+&kp EQUAL  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &tog 1                                                             &mo 3         &kp N6  &kp N7      &kp N8           &kp N9       &kp N0    &kp MINUS
+&kp TAB    &kp Q      &kp W     &kp F     &kp D      &kp B   &trans                                                             &trans        &kp J   &kp H       &kp U            &kp Y        &kp SEMI  &kp BSLH
+&kp ESC    &kp A      &kp R     &kp S     &kp T      &kp G   &trans     &kp LGUI         &kp LALT      &kp LCTRL  &kp RCTRL     &trans        &kp M   &hm RGUI N  &hm RIGHT_ALT E  &hm RCTRL I  &kp O     &kp SQT
+&kp LSHFT  &kp Z      &kp X     &kp C     &kp P      &kp V                               &kp F14       &kp PG_UP                              &kp K   &kp L       &kp COMMA        &kp DOT      &kp FSLH  &kp RSHFT
+&mo 2      &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &kp SPACE  &lt 7 BACKSPACE  &kp F13       &kp PG_DN  &lt 4 RETURN  &lt 1 LSHIFT          &kp UP      &kp DOWN         &kp LBKT     &kp RBKT  &mo 2
             >;
         };
 
-        mouse_default {
+        whatever {
             display-name = "Kp";
             bindings = <
-&trans  &kp Z   &trans              &trans              &trans             &trans  &trans                                        &trans  &trans     &trans     &trans  &trans  &trans  &trans
-&trans  &trans  &msc MOVE_Y(5)      &mmv MOVE_Y(-1200)  &msc MOVE_Y(-5)    &trans  &trans                                        &trans  &trans     &trans     &trans  &trans  &trans  &trans
-&trans  &trans  &mmv MOVE_X(-1200)  &mmv MOVE_Y(1200)   &mmv MOVE_X(1200)  &trans  &trans   &trans   &trans      &trans  &trans  &trans  &mkp RCLK  &mkp LCLK  &mo 2   &trans  &trans  &trans
-&trans  &trans  &trans              &trans              &trans             &trans                    &trans      &trans                  &trans     &trans     &trans  &trans  &trans  &trans
-&trans  &trans  &trans              &trans              &trans                     &kp F20  &kp F21  &trans      &trans  &trans  &trans             &trans     &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
 
-        mouse_fast {
+        mouse {
             display-name = "Fn";
             bindings = <
-&trans  &kp B   &trans              &trans              &trans             &trans  &trans                                      &trans  &trans     &trans     &trans  &trans  &trans  &trans
-&trans  &trans  &msc MOVE_Y(15)     &mmv MOVE_Y(-3600)  &msc MOVE_Y(-15)   &trans  &trans                                      &trans  &trans     &trans     &trans  &trans  &trans  &trans
-&trans  &trans  &mmv MOVE_X(-3600)  &mmv MOVE_Y(3600)   &mmv MOVE_X(3600)  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &mkp RCLK  &mkp LCLK  &trans  &mo 1   &trans  &trans
-&trans  &trans  &trans              &trans              &trans             &trans                  &trans      &trans                  &trans     &trans     &trans  &trans  &trans  &trans
-&trans  &trans  &trans              &trans              &trans                     &trans  &trans  &trans      &trans  &trans  &trans             &trans     &trans  &trans  &trans  &trans
+&trans  &trans  &trans   &trans   &trans   &trans  &trans                                        &trans  &trans     &trans     &trans   &trans   &trans  &trans
+&trans  &trans  &kp F24  &kp F23  &kp F22  &trans  &trans                                        &trans  &trans     &trans     &trans   &trans   &trans  &trans
+&trans  &trans  &kp F21  &kp F20  &kp F19  &trans  &trans   &trans   &trans      &trans  &trans  &trans  &mkp RCLK  &mkp LCLK  &kp F16  &kp F15  &trans  &trans
+&trans  &trans  &trans   &trans   &trans   &trans                    &trans      &trans                  &trans     &trans     &trans   &trans   &trans  &trans
+&trans  &trans  &trans   &trans   &trans           &kp F18  &kp F17  &trans      &trans  &trans  &trans             &trans     &trans   &trans   &trans  &trans
             >;
         };
 
