@@ -74,7 +74,7 @@
             display-name = "Purple";
             bindings = <
 &trans  &trans  &trans            &trans            &trans             &trans  &trans                                                 &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp LS(TAB)       &kp LA(UP)        &kp TAB            &trans  &trans                                                 &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans            &kp LA(UP)        &trans             &trans  &trans                                                 &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &kp LA(LEFT)      &kp LA(DOWN)      &kp LA(RIGHT)      &trans  &trans        &trans       &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &kp LS(LA(LEFT))  &kp LS(LA(UP))    &kp LS(LA(RIGHT))  &trans                             &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans            &kp LS(LA(DOWN))  &trans                     &kp LA(BSPC)  &kp LA(DEL)  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
@@ -85,7 +85,7 @@
             display-name = "Cyan";
             bindings = <
 &trans  &trans  &trans            &trans            &trans             &trans  &trans                                                         &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp LS(TAB)       &kp LG(UP)        &kp TAB            &trans  &trans                                                         &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans            &kp LG(UP)        &trans             &trans  &trans                                                         &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &kp LG(LEFT)      &kp LG(DOWN)      &kp LG(RIGHT)      &trans  &trans             &trans          &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &kp LS(LG(LEFT))  &kp LS(LG(UP))    &kp LS(LG(RIGHT))  &trans                                     &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans            &kp LS(LG(DOWN))  &trans                     &kp LG(BACKSPACE)  &kp LG(DELETE)  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
