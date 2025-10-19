@@ -21,7 +21,7 @@
 &kp EQUAL  &kp N1     &kp N2      &kp N3    &kp N4     &kp N5  &kp C_VOLUME_DOWN                                                                                 &kp C_PREVIOUS    &kp N6  &kp N7  &kp N8     &kp N9    &kp N0    &kp MINUS
 &kp TAB    &kp Q      &kp W       &kp F     &kp D      &kp B   &kp K_MUTE                                                                                        &kp C_PLAY_PAUSE  &kp J   &kp H   &kp U      &kp Y     &kp SEMI  &kp BSLH
 &kp ESC    &kp A      &kp R       &kp S     &kp T      &kp G   &kp C_VOLUME_UP    &kp LGUI         &kp LALT                  &kp LCTRL             &kp RCTRL     &kp C_PREVIOUS    &kp M   &kp N   &kp E      &kp I     &kp O     &kp SQT
-&kp LSHFT  &kp Z      &kp X       &kp C     &kp P      &kp V                                       &kp F14                   &kp LS(LA(DOWN))                                      &kp K   &kp L   &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
+&kp LSHFT  &kp Z      &kp X       &kp C     &kp P      &kp V                                       &kp LA(F3)                &kp LS(LA(DOWN))                                      &kp K   &kp L   &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
 &mo 3      &kp GRAVE  &caps_word  &kp LEFT  &kp RIGHT          &kp SPACE          &lt 7 BACKSPACE  &kp LG(LS(NUMBER_4))      &kp LS(LG(NUMBER_5))  &lt 4 RETURN  &lt 2 LSHIFT              &kp UP  &kp DOWN   &kp LBKT  &kp RBKT  &mo 3
             >;
         };
@@ -40,11 +40,11 @@
         mouse {
             display-name = "Fn";
             bindings = <
-&trans  &trans  &trans   &trans   &trans   &trans  &trans                                        &trans  &trans     &trans     &trans   &trans   &trans  &trans
-&trans  &trans  &kp F24  &kp F23  &kp F22  &trans  &trans                                        &trans  &trans     &trans     &trans   &trans   &trans  &trans
-&trans  &trans  &kp F21  &kp F20  &kp F19  &trans  &trans   &trans   &trans      &trans  &trans  &trans  &mkp RCLK  &mkp LCLK  &kp F16  &kp F15  &trans  &trans
-&trans  &trans  &trans   &trans   &trans   &trans                    &trans      &trans                  &trans     &trans     &trans   &trans   &trans  &trans
-&trans  &trans  &trans   &trans   &trans           &kp F18  &kp F17  &trans      &trans  &trans  &trans             &trans     &trans   &trans   &trans  &trans
+&trans  &trans  &trans   &trans   &trans   &trans  &trans                                              &trans  &trans     &trans     &trans   &trans  &trans  &trans
+&trans  &trans  &kp F16  &kp F17  &kp F18  &trans  &trans                                              &trans  &trans     &trans     &trans   &trans  &trans  &trans
+&trans  &trans  &kp F13  &kp F14  &kp F15  &trans  &trans      &trans      &trans      &trans  &trans  &trans  &mkp RCLK  &mkp LCLK  &kp F19  &trans  &trans  &trans
+&trans  &trans  &trans   &trans   &trans   &trans                          &trans      &trans                  &trans     &trans     &trans   &trans  &trans  &trans
+&trans  &trans  &trans   &trans   &trans           &kp LA(F1)  &kp LA(F2)  &trans      &trans  &trans  &trans             &trans     &trans   &trans  &trans  &trans
             >;
         };
 
@@ -95,11 +95,11 @@
         symbol {
             display-name = "Yellow";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                                    &trans                 &trans  &trans   &trans          &trans            &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                                    &trans                 &trans  &trans   &kp LBKT        &kp RBKT          &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                &trans                 &trans  &kp F22  &kp LEFT_BRACE  &kp RIGHT_BRACE   &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                                               &trans  &trans   &kp LESS_THAN   &kp GREATER_THAN  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS          &trans   &trans          &trans            &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                                    &trans                 &trans  &trans      &trans          &trans            &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                                    &trans                 &trans  &trans      &kp LBKT        &kp RBKT          &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                &trans                 &trans  &kp LA(F4)  &kp LEFT_BRACE  &kp RIGHT_BRACE   &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                                               &trans  &trans      &kp LESS_THAN   &kp GREATER_THAN  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS          &trans      &trans          &trans            &trans  &trans
             >;
         };
     };
