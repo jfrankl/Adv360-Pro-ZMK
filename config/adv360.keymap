@@ -43,7 +43,7 @@
 &trans  &trans  &trans   &trans   &trans   &trans  &trans                                              &trans  &trans     &trans     &trans   &trans  &trans  &trans
 &trans  &trans  &kp F16  &kp F17  &kp F18  &trans  &trans                                              &trans  &trans     &trans     &trans   &trans  &trans  &trans
 &trans  &trans  &kp F13  &kp F14  &kp F15  &trans  &trans      &trans      &trans      &trans  &trans  &trans  &mkp RCLK  &mkp LCLK  &kp F19  &trans  &trans  &trans
-&trans  &trans  &trans   &trans   &trans   &trans                          &trans      &trans                  &trans     &trans     &trans   &trans  &trans  &trans
+&trans  &trans  &kp F1   &kp F2   &kp F3   &trans                          &trans      &trans                  &trans     &trans     &trans   &trans  &trans  &trans
 &trans  &trans  &trans   &trans   &trans           &kp LA(F1)  &kp LA(F2)  &trans      &trans  &trans  &trans             &trans     &trans   &trans  &trans  &trans
             >;
         };
